@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Prepositions from './Prepositions'
 
-import { accusative, dative } from './prepositionsDefinitions';
+import definitions from './prepositionsDefinitions';
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
             German prepositions
           </h1>
         </header>
-        <Prepositions accusative={accusative} dative={dative} />
+        <Prepositions definitions={definitions} />
       </div>
     );
   }

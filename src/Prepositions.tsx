@@ -1,22 +1,21 @@
 import React from 'react'
 
-interface Accusative { always: Array<string>, movement: Array<string> }
-interface Dative { always: Array<string>, noMovement: Array<string> }
+interface Definition {
+  name: string,
+  dative: boolean,
+  accusative: boolean,
+  datExample: string | null,
+  accExample: string | null
+}
 
-const Prepositions = (props: { accusative: Accusative, dative: Dative }) => {
+interface Definitions extends Array<Definition>{}
+
+const Prepositions = (props: { definitions: Definitions }) => {
   return (
     <div>
-      <h3>Always</h3>
-      <div>Accusative</div>
       <ul>
         {
-          props.accusative.always.map(prep => <li>{prep}</li>)
-        }
-      </ul>
-      <div>Dative</div>
-      <ul>
-        {
-          props.dative.always.map(prep => <li>{prep}</li>)
+          props.definitions.map(definition => <li>{definition.name}</li>)
         }
       </ul>
     </div>
