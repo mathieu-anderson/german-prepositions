@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Prepositions from './Prepositions'
-
-import definitions from './prepositionsDefinitions';
+import PrepositionsPage from './PrepositionsPage'
+import prepositionsList from './prepositionsList'
 
 class App extends Component {
   render() {
@@ -12,7 +11,7 @@ class App extends Component {
             German prepositions
           </h1>
         </header>
-        <Prepositions definitions={definitions} />
+        <PrepositionsPage list={prepositionsList} />
       </div>
     );
   }
