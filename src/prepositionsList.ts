@@ -1,23 +1,17 @@
-type Definition = {
-  name: string,
-  dative: boolean,
-  accusative: boolean,
-  datExample: string | null,
-  accExample: string | null
-}
-
-const definitions: Definition[] = [
+const prepositionsList = [
   {
     name: 'an',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way': true,
     datExample: 'Ich bin am Meer',
     accExample: 'Ich gehe mit dir ans Ende der Welt'
   },
   {
     name: 'auf',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way': true,
     datExample: 'Ich bin auf der Insel',
     accExample: 'Ich fliege auf die Insel'
   },
@@ -25,6 +19,7 @@ const definitions: Definition[] = [
     name: 'aus',
     dative: true,
     accusative: false,
+    'two-way': false,
     datExample: 'Er kommt aus der Küche',
     accExample: null
   },
@@ -32,6 +27,7 @@ const definitions: Definition[] = [
     name: 'ausser',
     dative: true,
     accusative: false,
+    'two-way': false,
     datExample: 'Außer der Liebe nichts',
     accExample: null
   },
@@ -39,6 +35,7 @@ const definitions: Definition[] = [
     name: 'bei',
     dative: true,
     accusative: false,
+    'two-way': false,
     datExample: 'Die Schule ist bei der Apotheke',
     accExample: null
   },
@@ -46,6 +43,7 @@ const definitions: Definition[] = [
     name: 'durch',
     dative: false,
     accusative: true,
+    'two-way': false,
     datExample: null,
     accExample: 'Wir fahren durch den Fluss'
   },
@@ -53,6 +51,7 @@ const definitions: Definition[] = [
     name: 'für',
     dative: false,
     accusative: true,
+    'two-way': false,
     datExample: null,
     accExample: 'Ich sterbe für dich'
   },
@@ -60,6 +59,7 @@ const definitions: Definition[] = [
     name: 'gegen',
     dative: false,
     accusative: true,
+    'two-way': false,
     datExample: null,
     accExample: 'Du bist gegen die Wand'
   },
@@ -67,20 +67,23 @@ const definitions: Definition[] = [
     name: 'gegenüber',
     dative: true,
     accusative: false,
+    'two-way':false,
     datExample: 'Die Bank liegt dem Bahnhof gegenüber',
     accExample: null
   },
   {
     name: 'hinter',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way':true,
     datExample: 'Hinter unserem Haus ist ein Garten',
     accExample: 'Gehen Sie bitte hinter das Haus'
   },
   {
     name: 'in',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way': true,
     datExample: 'Ich bin im Kino',
     accExample: 'Wie oft gehts du ins Kino?'
   },
@@ -88,6 +91,7 @@ const definitions: Definition[] = [
     name: 'mit',
     dative: true,
     accusative: false,
+    'two-way': false,
     datExample: 'Ich reise mit meinem Fahrrad',
     accExample: null
   },
@@ -95,13 +99,15 @@ const definitions: Definition[] = [
     name: 'nach',
     dative: true,
     accusative: false,
+    'two-way': false,
     datExample: 'Sie studiert nach der Arbeit',
     accExample: null
   },
   {
     name: 'neben',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way': true,
     datExample: 'Die Maus bleibt neben dem Tisch',
     accExample: 'Der Vogel fliegt neben das Fenster'
   },
@@ -109,6 +115,7 @@ const definitions: Definition[] = [
     name: 'ohne',
     dative: false,
     accusative: true,
+    'two-way': false,
     datExample: null,
     accExample: 'Nicht ohne meinen Hut'
   },
@@ -116,13 +123,15 @@ const definitions: Definition[] = [
     name: 'seit',
     dative: true,
     accusative: false,
+    'two-way': false,
     datExample: 'Ich lebe seit einem Monat in Berlin',
     accExample: null
   },
   {
     name: 'über',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way': true,
     datExample: 'Die Lampe steht über dem Tisch',
     accExample: 'Ich kaufe alles über das Internet'
   },
@@ -130,13 +139,15 @@ const definitions: Definition[] = [
     name: 'um',
     dative: false,
     accusative: true,
+    'two-way': false,
     datExample: null,
     accExample: 'Mein Hund läuft um das Haus'
   },
   {
     name: 'unter',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way': true,
     datExample: 'Meine Katze ist unter dem Tisch',
     accExample: 'Seine Katze geht unter den Tisch'
   },
@@ -144,13 +155,15 @@ const definitions: Definition[] = [
     name: 'von',
     dative: true,
     accusative: false,
+    'two-way': false,
     datExample: 'Das Lied von der Erde',
     accExample: null
   },
   {
     name: 'vor',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way': true,
     datExample: 'Sie wartet vor der Schule',
     accExample: 'Stell die Schuhe vor die Tür'
   },
@@ -158,16 +171,18 @@ const definitions: Definition[] = [
     name: 'zu',
     dative: true,
     accusative: false,
+    'two-way': false,
     datExample: 'Er läuft zu seiner Mutter',
     accExample: null
   },
   {
     name: 'zwischen',
-    dative: true,
-    accusative: true,
+    dative: false,
+    accusative: false,
+    'two-way': true,
     datExample: 'Das Bad liegt zwischen der Küche und dem Wohnzimmer',
     accExample: 'Sie steckte den Brief zwischen die Seiten das Buch'
   }
 ]
 
-export default definitions;
+export default prepositionsList;
