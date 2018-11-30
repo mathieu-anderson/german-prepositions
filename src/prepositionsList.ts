@@ -1,3 +1,9 @@
+import { Preposition } from './types'
+
+function getListFor(list: Preposition[], forCase: string) {
+  return list.filter(prep => prep[forCase] === true)
+}
+
 const prepositionsList = [
   {
     name: 'an',
@@ -184,5 +190,9 @@ const prepositionsList = [
     accExample: 'Sie steckte den Brief zwischen die Seiten das Buch'
   }
 ]
+
+export const dativeList = getListFor(prepositionsList, 'dative');
+export const accusativeList = getListFor(prepositionsList, 'accusative');
+export const twoWayList = getListFor(prepositionsList, 'two-way');
 
 export default prepositionsList;
