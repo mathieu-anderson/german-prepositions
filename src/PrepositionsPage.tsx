@@ -3,7 +3,6 @@ import React from 'react'
 import { Preposition } from './types'
 import PrepositionsListCard from './PrepositionsListCard'
 
-
 const PrepositionsPage = (props: { list: Preposition[] }) => {
   return (
     <div>
