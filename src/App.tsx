@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import styled from 'styled-components';
 
 import prepositionsList, {
   dativeList,
@@ -11,18 +12,23 @@ import DativePage from './DativePage';
 import AccusativePage from './AccusativePage';
 import TwoWayPage from './TwoWayPage';
 
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+`;
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Link to='/'>
             <header>
-              <h1>
+              <StyledLink to='/'>
                 German prepositions
-              </h1>
+              </StyledLink>
             </header>
-          </Link>
           <Route
             exact
             path="/"
