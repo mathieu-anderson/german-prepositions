@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import { Header, RouterLink } from "./StyledComponents";
 
@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <React.Fragment>
           <GlobalStyles />
           <Header link>
@@ -53,7 +53,7 @@ class App extends Component {
             render={props => <TwoWayPage {...props} list={twoWayList} />}
           />
         </React.Fragment>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
