@@ -1,47 +1,56 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
+import { createGlobalStyle } from "styled-components";
+import { Header, RouterLink } from "./StyledComponents";
 
-import prepositionsList, {
+import prepositionsData, {
   dativeList,
   accusativeList,
   twoWayList
-} from './prepositionsList';
-import PrepositionsPage from './PrepositionsPage';
-import DativePage from './DativePage';
-import AccusativePage from './AccusativePage';
-import TwoWayPage from './TwoWayPage';
+} from "./prepositionsData";
+import Landing from "./Landing";
+import DativePage from "./DativePage";
+import AccusativePage from "./AccusativePage";
+import TwoWayPage from "./TwoWayPage";
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    font-family: 'Courier', sans-serif;
+    color: black;
+    margin: 1em;
+  }
+`;
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <React.Fragment>
-          <Link to='/'>
-            <header>
-              <h1>
-                German prepositions
-              </h1>
-            </header>
-          </Link>
+          <GlobalStyles />
+          <Header>
+            <RouterLink to="/">German prepositions</RouterLink>
+          </Header>
           <Route
             exact
             path="/"
-            render={props => <PrepositionsPage {...props} list={prepositionsList} />}
+            render={props => <Landing {...props} list={prepositionsData} />}
           />
           <Route
             exact
             path="/dative"
-            render={props => <DativePage {...props} list={dativeList}/>}
+            render={props => <DativePage {...props} list={dativeList} />}
           />
           <Route
             exact
             path="/accusative"
-            render={props => <AccusativePage {...props} list={accusativeList}/>}
+            render={props => (
+              <AccusativePage {...props} list={accusativeList} />
+            )}
           />
           <Route
             exact
             path="/two-way"
-            render={props => <TwoWayPage {...props} list={twoWayList}/>}
+            render={props => <TwoWayPage {...props} list={twoWayList} />}
           />
         </React.Fragment>
       </BrowserRouter>

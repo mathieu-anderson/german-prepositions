@@ -1,20 +1,25 @@
-import React, { Fragment } from 'react'
-import { Preposition } from './types'
+import React from "react";
+import { Preposition } from "./types";
+import {
+  Header,
+  CardsWrapper,
+  Card,
+  CardTitle,
+  CardContent
+} from "./StyledComponents";
 
 export default function Dative(props: { list: Preposition[] }) {
   return (
-    <div>
-      <h3>
-        Dative
-      </h3>
-      {
-        props.list.map(prep => (
-          <React.Fragment key={prep.name}>
-            <div>{prep.name}</div>
-            <div>{prep.datExample}</div>
-          </React.Fragment>
-        ))
-      }
-    </div>
-  )
+    <React.Fragment>
+      <Header>dative</Header>
+      <CardsWrapper>
+        {props.list.map(prep => (
+          <Card key={prep.name}>
+            <CardTitle>{prep.name}</CardTitle>
+            <CardContent case="dative">{prep.datExample}</CardContent>
+          </Card>
+        ))}
+      </CardsWrapper>
+    </React.Fragment>
+  );
 }
