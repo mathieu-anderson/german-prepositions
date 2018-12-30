@@ -27,7 +27,7 @@ class App extends Component {
       <BrowserRouter>
         <React.Fragment>
           <GlobalStyles />
-          <Header>
+          <Header link>
             <RouterLink to="/">German prepositions</RouterLink>
           </Header>
           <Route

@@ -14,6 +14,10 @@ interface colors {
 }
 
 export const Header = styled.header`
+  &:hover {
+    transform: ${(props: Props) => (props.link ? "scale(1.1)" : "")};
+  }
+
   margin-bottom: 1em;
   text-align: center;
   font-size: 2em;
