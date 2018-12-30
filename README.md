@@ -14,3 +14,7 @@ npm start
 ## Look at it
 
 http://german-prepositions.surge.sh/
+
+## To do
+
+- Use React Hooks to display translations on hover of a specific preposition card (implementation example : https://github.com/streamich/react-use/blob/master/src/useHover.ts)

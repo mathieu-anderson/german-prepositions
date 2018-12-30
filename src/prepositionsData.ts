@@ -7,211 +7,289 @@ function getListFor(list: Preposition[], forCase: string) {
 const prepositionsData = [
   {
     name: "ab",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Ab dem ersten Schultag",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "an",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Ich bin am Meer",
-    accExample: "Ich gehe mit dir ans Ende der Welt"
+    datExampleTranslation: null,
+    accExample: "Ich gehe mit dir ans Ende der Welt",
+    accExampleTranslation: null
   },
   {
     name: "auf",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Ich bin auf der Insel",
-    accExample: "Ich fliege auf die Insel"
+    datExampleTranslation: null,
+    accExample: "Ich fliege auf die Insel",
+    accExampleTranslation: null
   },
   {
     name: "aus",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Er kommt aus der Küche",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "ausser",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Außer der Liebe nichts",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "bei",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Die Schule ist bei der Apotheke",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "durch",
+    translation: "by, through, due to",
     dative: false,
     accusative: true,
     "two-way": false,
     datExample: null,
-    accExample: "Wir fahren durch den Fluss"
+    datExampleTranslation: null,
+    accExample: "Wir fahren durch den Fluss",
+    accExampleTranslation: "We drive through the river"
   },
   {
     name: "entgegen",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Sie lief mir entgegen",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "für",
+    translation: "not translated yet",
     dative: false,
     accusative: true,
     "two-way": false,
     datExample: null,
-    accExample: "Ich sterbe für dich"
+    datExampleTranslation: null,
+    accExample: "Ich sterbe für dich",
+    accExampleTranslation: null
   },
   {
     name: "gegen",
+    translation: "not translated yet",
     dative: false,
     accusative: true,
     "two-way": false,
     datExample: null,
-    accExample: "Du bist gegen die Wand"
+    datExampleTranslation: null,
+    accExample: "Du bist gegen die Wand",
+    accExampleTranslation: null
   },
   {
     name: "gegenüber",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Die Bank liegt dem Bahnhof gegenüber",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "hinter",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Hinter unserem Haus ist ein Garten",
-    accExample: "Gehen Sie bitte hinter das Haus"
+    datExampleTranslation: null,
+    accExample: "Gehen Sie bitte hinter das Haus",
+    accExampleTranslation: null
   },
   {
     name: "in",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Ich bin im Kino",
-    accExample: "Wie oft gehts du ins Kino?"
+    datExampleTranslation: null,
+    accExample: "Wie oft gehts du ins Kino?",
+    accExampleTranslation: null
   },
   {
     name: "mit",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Ich reise mit meinem Fahrrad",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "nach",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Sie studiert nach der Arbeit",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "nahe",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Nahe der Natur",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "neben",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Die Maus bleibt neben dem Tisch",
-    accExample: "Der Vogel fliegt neben das Fenster"
+    datExampleTranslation: null,
+    accExample: "Der Vogel fliegt neben das Fenster",
+    accExampleTranslation: null
   },
   {
     name: "ohne",
+    translation: "not translated yet",
     dative: false,
     accusative: true,
     "two-way": false,
     datExample: null,
-    accExample: "Nicht ohne meinen Hut"
+    datExampleTranslation: null,
+    accExample: "Nicht ohne meinen Hut",
+    accExampleTranslation: null
   },
   {
     name: "seit",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Ich lebe seit einem Monat in Berlin",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "über",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Die Lampe steht über dem Tisch",
-    accExample: "Ich kaufe alles über das Internet"
+    datExampleTranslation: null,
+    accExample: "Ich kaufe alles über das Internet",
+    accExampleTranslation: null
   },
   {
     name: "um",
+    translation: "not translated yet",
     dative: false,
     accusative: true,
     "two-way": false,
     datExample: null,
-    accExample: "Mein Hund läuft um das Haus"
+    datExampleTranslation: null,
+    accExample: "Mein Hund läuft um das Haus",
+    accExampleTranslation: null
   },
   {
     name: "unter",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Meine Katze ist unter dem Tisch",
-    accExample: "Seine Katze geht unter den Tisch"
+    datExampleTranslation: null,
+    accExample: "Seine Katze geht unter den Tisch",
+    accExampleTranslation: null
   },
   {
     name: "von",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Das Lied von der Erde",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "vor",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Sie wartet vor der Schule",
-    accExample: "Stell die Schuhe vor die Tür"
+    datExampleTranslation: null,
+    accExample: "Stell die Schuhe vor die Tür",
+    accExampleTranslation: null
   },
   {
     name: "zu",
+    translation: "not translated yet",
     dative: true,
     accusative: false,
     "two-way": false,
     datExample: "Er läuft zu seiner Mutter",
-    accExample: null
+    datExampleTranslation: null,
+    accExample: null,
+    accExampleTranslation: null
   },
   {
     name: "zwischen",
+    translation: "not translated yet",
     dative: false,
     accusative: false,
     "two-way": true,
     datExample: "Das Bad liegt zwischen der Küche und dem Wohnzimmer",
-    accExample: "Sie steckte den Brief zwischen die Seiten das Buch"
+    datExampleTranslation: null,
+    accExample: "Sie steckte den Brief zwischen die Seiten das Buch",
+    accExampleTranslation: null
   }
 ];
 
