@@ -10,7 +10,6 @@ interface colors {
   [key: string]: string;
   dative: string;
   accusative: string;
-  genitive: string;
   "two-way": string;
 }
 

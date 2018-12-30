@@ -6,6 +6,14 @@ function getListFor(list: Preposition[], forCase: string) {
 
 const prepositionsData = [
   {
+    name: "ab",
+    dative: true,
+    accusative: false,
+    "two-way": false,
+    datExample: "Ab dem ersten Schultag",
+    accExample: null
+  },
+  {
     name: "an",
     dative: false,
     accusative: false,
@@ -52,6 +60,14 @@ const prepositionsData = [
     "two-way": false,
     datExample: null,
     accExample: "Wir fahren durch den Fluss"
+  },
+  {
+    name: "entgegen",
+    dative: true,
+    accusative: false,
+    "two-way": false,
+    datExample: "Sie lief mir entgegen",
+    accExample: null
   },
   {
     name: "für",
@@ -107,6 +123,14 @@ const prepositionsData = [
     accusative: false,
     "two-way": false,
     datExample: "Sie studiert nach der Arbeit",
+    accExample: null
+  },
+  {
+    name: "nahe",
+    dative: true,
+    accusative: false,
+    "two-way": false,
+    datExample: "Nahe der Natur",
     accExample: null
   },
   {

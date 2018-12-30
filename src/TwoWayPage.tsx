@@ -17,10 +17,10 @@ export default function TwoWayPage(props: { list: Preposition[] }) {
         {props.list.map(prep => (
           <Card key={prep.name}>
             <CardTitle>{prep.name}</CardTitle>
-            <CardContent case="dative">[dative] {prep.datExample}</CardContent>
             <CardContent case="accusative">
               [accusative] {prep.accExample}
             </CardContent>
+            <CardContent case="dative">[dative] {prep.datExample}</CardContent>
           </Card>
         ))}
       </CardsWrapper>
