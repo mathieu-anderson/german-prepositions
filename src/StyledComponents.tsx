@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 interface Props {
   case?: string;
+  link?: boolean;
 }
 
 interface colors {
@@ -23,6 +24,7 @@ export const Header = styled.header`
 export const RouterLink = styled(Link)`
   text-decoration: none;
   font-weight: normal;
+  color: black;
   &:visited {
     color: black;
   }
@@ -36,6 +38,9 @@ export const CardsWrapper = styled.div`
 
 export const Card = styled.div`
   border: 1px solid black;
+  &:hover {
+    transform: ${(props: Props) => (props.link ? "scale(1.1)" : "")};
+  }
   margin: 1em 0;
   padding: 1em;
   min-width: 10em;

@@ -6,7 +6,7 @@ const PrepositionsCard = (props: { case: string; list: Preposition[] }) => {
   const route = `/${props.case}`;
   return (
     <RouterLink to={route}>
-      <Card>
+      <Card link>
         <CardTitle>{props.case}</CardTitle>
         <CardContent case={props.case}>
           {props.list.map(prep => {
