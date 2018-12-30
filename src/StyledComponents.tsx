@@ -40,10 +40,9 @@ export const Card = styled.div`
   &:hover {
     transform: ${(props: Props) => (props.link ? "scale(1.1)" : "")};
   }
-  margin: 1em 0;
+  margin: 1em;
   padding: 1em;
-  min-width: 10em;
-  max-width: 15em;
+  width: 15em;
 `;
 
 export const CardTitle = styled.div`
