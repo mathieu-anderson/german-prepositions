@@ -10,3 +10,15 @@ export interface Preposition {
   accExample: string | null;
   accExampleTranslation: string | null;
 }
+
+export interface Props {
+  case?: string;
+  link?: boolean;
+}
+
+export interface Colors {
+  [key: string]: string;
+  dative: string;
+  accusative: string;
+  "two-way": string;
+}

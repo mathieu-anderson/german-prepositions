@@ -1,23 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
-interface Props {
-  case?: string;
-  link?: boolean;
-}
-
-interface colors {
-  [key: string]: string;
-  dative: string;
-  accusative: string;
-  "two-way": string;
-}
+import { Props, Colors } from "./types";
 
 export const Header = styled.header`
   &:hover {
     transform: ${(props: Props) => (props.link ? "scale(1.1)" : "")};
   }
-
   margin-bottom: 1em;
   text-align: center;
   font-size: 2em;
@@ -56,7 +44,7 @@ export const CardTitle = styled.div`
 
 export const CardContent = styled.div`
   color: ${(props: Props) => {
-    const colors: colors = {
+    const colors: Colors = {
       dative: "purple",
       accusative: "green",
       genitive: "orange",
