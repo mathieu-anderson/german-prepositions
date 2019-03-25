@@ -2,7 +2,9 @@
 
 The German language definitely needs a type system for its genders and cases.
 
-A learning project for TypeScript and styled-components.
+## Learning goals
+- [x] Basic TypeScript (types, interface, use with React)
+- [x] Basic use of `styled-component`
 
 ## Run it
 
